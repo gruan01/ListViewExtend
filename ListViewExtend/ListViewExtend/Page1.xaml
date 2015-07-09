@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewExtend.Page1">
+
+
+  <ListView ItemsSource="{Binding Datas}" IsPullToRefreshEnabled="True" Refreshing="RefreshData">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <Grid HeightRequest="50">
+            <Label Text="{Binding .}" />
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+
+</ContentPage>
