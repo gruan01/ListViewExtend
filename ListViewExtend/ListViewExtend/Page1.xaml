@@ -8,8 +8,13 @@
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
-          <Grid HeightRequest="50">
-            <Label Text="{Binding .}" />
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="50" />
+              <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label Text="{Binding .}" VerticalOptions="Center" />
+            <BoxView HeightRequest="1" Color="Green" Grid.Row="1" />
           </Grid>
         </ViewCell>
       </DataTemplate>
